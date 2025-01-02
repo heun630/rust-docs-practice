@@ -35,10 +35,10 @@ fn mutability_and_address() -> i64{
 }
 
 fn static_variable() {
-    // `static mut`는 전역적으로 변경 가능한 데이터를 정의할 때 사용됩니다.
-    // 하지만 데이터 경합(Data Race)의 가능성 때문에 Rust는 이를 안전하지 않은(unsafe) 것으로 간주합니다.
+    // `static mut`는 전역적으로 변경 가능한 데이터를 정의할 때 사용된다.
+    // 하지만 데이터 경합(Data Race)의 가능성 때문에 Rust는 이를 안전하지 않은(unsafe) 것으로 간주한다.
     // warning: creating a shared reference to mutable static is discouraged
-    // `static mut`는 반드시 `unsafe{}` 안에서만 접근할 수 있습니다.
+    // `static mut`는 반드시 `unsafe{}` 안에서만 접근할 수 있다.
     unsafe {
         COUNTER += 1;
         println!("Counter: {}", COUNTER);
